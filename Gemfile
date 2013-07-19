@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # Must specify Ruby version
 ruby '2.0.0'
+gem 'protected_attributes'
 
 # Must include gem per https://devcenter.heroku.com/articles/rails-integration-gems
 gem 'rails_12factor'
@@ -35,8 +36,8 @@ group :production do
 end
 group :development, :test do
   gem 'sqlite3'
-  gem 'unicorn'
-#  gem 'webrick'
+#  gem 'unicorn'
+  gem 'webrick'
 end
 
 group :doc do
