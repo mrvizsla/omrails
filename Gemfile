@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Must specify Ruby version
 ruby '2.0.0'
 
+# Must include gem per https://devcenter.heroku.com/articles/rails-integration-gems
+gem 'rails_12factor'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
