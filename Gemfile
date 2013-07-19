@@ -35,7 +35,8 @@ group :production do
 end
 group :development, :test do
   gem 'sqlite3'
-  gem 'webrick'
+  gem 'unicorn'
+#  gem 'webrick'
 end
 
 group :doc do
