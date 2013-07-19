@@ -28,12 +28,14 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # Use sqlite3 as the database for Active Record
-# Heroku does not like sqlite3 
+# Heroku does not like sqlite3 (sub pg), webrick (sub unicorn)
 group :production do
   gem 'pg'
+  gem 'unicorn'
 end
 group :development, :test do
   gem 'sqlite3'
+  gem 'webrick'
 end
 
 group :doc do
