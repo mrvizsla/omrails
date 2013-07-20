@@ -2,13 +2,10 @@ source 'https://rubygems.org'
 
 # Must specify Ruby version
 ruby '2.0.0'
-gem 'protected_attributes'
 
-# Must include gem per https://devcenter.heroku.com/articles/rails-integration-gems
-gem 'rails_12factor'
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
+gem 'protected_attributes'
+gem 'rails_12factor'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -19,25 +16,31 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
-
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-
 # Use sqlite3 as the database for Active Record
 # Heroku does not like sqlite3 (sub pg), webrick (sub unicorn)
 group :production do
   gem 'pg'
-  gem 'unicorn'
+#  gem 'unicorn'
+	gem 'webrick'
 end
 group :development, :test do
   gem 'sqlite3'
 #  gem 'unicorn'
   gem 'webrick'
+end
+
+#gem 'sass-rails', '~> 4.0.0'
+#gem 'bootstrap-sass', '~> 2.3.2.1'
+
+group :assets do
+	# Use SCSS for stylesheets
+	gem 'sass-rails', '~> 4.0.0'
+	# https://github.com/thomas-mcdonald/bootstrap-sass
+	gem 'bootstrap-sass', '~> 2.3.2.1'
+	# Use Uglifier as compressor for JavaScript assets
+	gem 'uglifier', '>= 1.3.0'
+	# Use CoffeeScript for .js.coffee assets and views
+	gem 'coffee-rails', '~> 4.0.0'
 end
 
 group :doc do
