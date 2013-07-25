@@ -16,6 +16,14 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# For login, logout, edit acct., etc.
+gem 'devise', '3.0.0.rc'
+
+# For view mods
+# activemodel was -v 4.0.0
+# actionpack was -v 4.0.0
+gem 'simple_form', '3.0.0.rc'
+
 # Use sqlite3 as the database for Active Record
 # Heroku does not like sqlite3 (sub pg), webrick (sub unicorn)
 group :production do
