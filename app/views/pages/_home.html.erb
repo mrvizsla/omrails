@@ -1,11 +1,5 @@
-<% if user_signed_in? %>
-	<div class="hero-unit">
-		<h3>Your Purple<font color="#FF00FF">Walnut</font></h3><hr>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		</p>
-	</div>
-<% else %>
+
+<% unless user_signed_in? %>
 	<div class="hero-unit">
 		<h3>Purple<font color="#FF00FF">Walnut</font></h3><hr>
 		<p>
