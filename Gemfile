@@ -31,8 +31,8 @@ gem 'paperclip', '~> 3.0'
 # Heroku does not like sqlite3 (sub pg), webrick (sub unicorn)
 group :production do
   gem 'pg'
-#  gem 'unicorn'
-	gem 'webrick'
+  gem 'unicorn'
+#	gem 'webrick'
 end
 group :development, :test do
   gem 'sqlite3'
