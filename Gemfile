@@ -27,6 +27,8 @@ gem 'simple_form', '3.0.0.rc'
 # Added to allow user to upload images
 gem 'paperclip', '~> 3.0'
 
+gem 'faker'
+
 # Use sqlite3 as the database for Active Record
 # Heroku does not like sqlite3 (sub pg), webrick (sub unicorn)
 group :production do
